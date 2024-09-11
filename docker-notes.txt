@@ -32,7 +32,13 @@ ENTRYPOINT:
 Exec Form:
 	- komut: CMD["java","app"]
 	- bu form'da docker herhangi bir shell çalıştırmaz.
+	- bu form'da herhangi bir shell çalışmadığı için environment variable'lara erişemezler.
+	- ENTRYPOINT ve CMD beraber kullanılacaksa Exec form kullanılmalıdır. 
+	- Shell formu kullanıldığında CMD'deki komutlar ENTRYPOINT'e aktarılmaz.
 Shell Form:
 	- komut: CMD java app
 	- shell açılarak çalıştırılır ve process id PID = 1 olarak bu komutla başlar.
+	- ENTRYPOINT ve CMD beraber kullanılacaksa Exec form kullanılmalıdır. 
+	- Shell formu kullanıldığında CMD'deki komutlar ENTRYPOINT'e aktarılmaz.
+	
 	
