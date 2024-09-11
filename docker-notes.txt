@@ -1,0 +1,38 @@
+Docker Udemy Notlar
+=========================
+genel:
+- nerde durduğu (resgistry veya docker hub)/imaj repository'si:tag
+	-docker.io/sceylan/todoapp:latest
+
+
+bölüm1:
+container sanal makine farkı:
+	- sanal makine bilgisayarı sanallaştırır container ise uygulamayı sanallaştırır.
+	- sanal makinelere kıyasla daha hafiftir ve çok daha hızlı başlar.
+	- uygulama taşınabilirliği açısından container daha uygun bir teknolojidir.
+	
+bölüm 5:
+ADD ve COPY - ADD COPY ile bire bir aynı işi yapar. Bunun yanında COPY'nin yapamadığı 2 iş yapar:
+	- ADD bir tar dosyası kopyaladığında sıkıştırılmış olan dosyayı açarak kopyalar.
+	- COPY sadece sistemdeki dosyaları kopyalar ADD ise uzak bir lokasyondan örneğin bir web sitesinden kopyalama yapabilmemizi sağlar.
+
+
+ENTRYPOINT ve CMD:
+	- CMD ile aynı anda oluşturulursa ENTRYPOINT'e parametre olarak girer.
+	- hem ENTRYPOINT hem de CMD varsa CMD talimatları parametre olarak ENTRYPOINT'e eklenir.
+
+CMD :
+	- eğer biz başka komut girmediysek container ayağa kalktığında çalıştırılacak uygulamanın yazıldığı yer.
+	- container çalıştırılırken runtime'da override edilebilir ve başka komut çalıştırılabilir.
+
+ENTRYPOINT:
+	- CMD ile birebir aynı işi yapar.
+	- CMD'den farkı ENTRYPOINT runtime'da değiştirilmez.
+	
+Exec Form:
+	- komut: CMD["java","app"]
+	- bu form'da docker herhangi bir shell çalıştırmaz.
+Shell Form:
+	- komut: CMD java app
+	- shell açılarak çalıştırılır ve process id PID = 1 olarak bu komutla başlar.
+	
