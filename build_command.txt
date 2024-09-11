@@ -1,1 +1,4 @@
-docker build -t dukakbey/sceylan --build-arg color:kirmizi .
+build:
+  docker build -t dukakbey/sceylan --build-arg color:kirmizi .
+run:
+  docker container run -d -p 80:80 dukakbey/sceylan
