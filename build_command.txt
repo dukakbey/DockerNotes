@@ -1,0 +1,1 @@
+docker build -t dukakbey/sceylan --build-arg color:kirmizi .
