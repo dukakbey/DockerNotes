@@ -14,6 +14,8 @@ container sanal makine farkı:
 bölüm 4:
 network:
 	- bridge: varsayılan network driver'dır. 
+		- default bridge'de olmayan bir özellik : kendi oluşturduğumuz bridge network'lerinde dns hizmeti vardır. Containerlar arası isimleri ile ulaşabiliriz.
+		- default bridge network'te network bağlantısını kesemeyiz ama kullanıcı tanımlı bridge network'te runtime'da başka networke bağlanabiliyoruz veya bağlantı kesebiliyoruz.
 	- host: bridge üzerine bağlı olduğu sistemin direk network ağ altyapısını kullanır. izolasyon yoktur.
 	- macvlan:
 	- none: container hiçbir şekilde ağ bağlantısı olmasın dersen.
