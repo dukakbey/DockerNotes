@@ -10,7 +10,15 @@ container sanal makine farkı:
 	- sanal makine bilgisayarı sanallaştırır container ise uygulamayı sanallaştırır.
 	- sanal makinelere kıyasla daha hafiftir ve çok daha hızlı başlar.
 	- uygulama taşınabilirliği açısından container daha uygun bir teknolojidir.
-	
+
+bölüm 4:
+network:
+	- bridge: varsayılan network driver'dır. 
+	- host: bridge üzerine bağlı olduğu sistemin direk network ağ altyapısını kullanır. izolasyon yoktur.
+	- macvlan:
+	- none: container hiçbir şekilde ağ bağlantısı olmasın dersen.
+	- overlay: 5 farklı sunucuda çalışan container'ların aynı ağda çalışıyormuş gibi çalışması istendiğinde.
+	- container run -p 8080:5555 8080 : host yani pc local ağ , 5555 ise docker içi container port numarası
 bölüm 5:
 ADD ve COPY - ADD COPY ile bire bir aynı işi yapar. Bunun yanında COPY'nin yapamadığı 2 iş yapar:
 	- ADD bir tar dosyası kopyaladığında sıkıştırılmış olan dosyayı açarak kopyalar.
