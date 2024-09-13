@@ -10,7 +10,8 @@ container sanal makine farkı:
 	- sanal makine bilgisayarı sanallaştırır container ise uygulamayı sanallaştırır.
 	- sanal makinelere kıyasla daha hafiftir ve çok daha hızlı başlar.
 	- uygulama taşınabilirliği açısından container daha uygun bir teknolojidir.
-
+bölüm 3:
+	- imajda birden fazla uygulama çalıştırabiliriz ama 1 adet ana uygulama çalışır.
 bölüm 4:
 network:
 	- bridge: varsayılan network driver'dır. 
