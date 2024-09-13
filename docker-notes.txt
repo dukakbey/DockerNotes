@@ -60,3 +60,11 @@ Shell Form:
 	- Shell formu kullanıldığında CMD'deki komutlar ENTRYPOINT'e aktarılmaz.
 	
 	
+bölüm7:
+docker-compose: 
+	- version:
+	- services:
+	- volumes:
+	- networks:
+	- secrets:
+- docker-compoese down oluşturulan volume'leri silmez ayrıca silmek gerekir.
