@@ -1,9 +1,9 @@
 Docker Udemy Notlar
 =========================
 genel:
+- windows docker engine'i küçük bir linux sistemi kurup onun üzerinde çalıştırıyor.
 - nerde durduğu (resgistry veya docker hub)/imaj repository'si:tag
 	-docker.io/sceylan/todoapp:latest
-
 
 bölüm1:
 container sanal makine farkı:
@@ -12,6 +12,13 @@ container sanal makine farkı:
 	- uygulama taşınabilirliği açısından container daha uygun bir teknolojidir.
 bölüm 3:
 	- imajda birden fazla uygulama çalıştırabiliriz ama 1 adet ana uygulama çalışır.
+	- "docker container exec -it websunucu sh" 
+		- buradaki -it =>--interactive --tty : interaktif modda bağlan ve terminal bağlantısı kur.
+	- cmd veya entrypoint ile girdiğimiz uygulama pid 1 ile çalışır ve docker sürekli bu uygulamayı gözler bu uygulama çalıştığı sürece container çalışır.
+	- Docker imajı dediğimiz şey bir temel linux sistemini alıp üzerine yaptığımız her değişikliğin ayrı bir dosya katmanı olarak tutulduğu en sonunda bütün bu katmanların sanki bir bütünmüş gibi çalışmasının sağlandığı docker objesidir. 
+volume:
+	- docker volume create ilkvolume
+		- docker container run -v ilkvolume:/myapp_folder alpine : klasör yoksa otomatik yaratılıyor.
 bölüm 4:
 network:
 	- bridge: varsayılan network driver'dır. 
